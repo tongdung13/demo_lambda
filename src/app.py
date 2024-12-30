@@ -8,7 +8,7 @@ app.include_router(profile.router, prefix="/profile", tags=["Profile"])
 
 @app.get("/")
 async def read_root():
-    return demo.hello()
+    return await demo.hello()
 
 
 handler = Mangum(app)
